@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    color:#fff;
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+.app {
+    margin: auto;
+    /* max-width: 50%; */
+    max-width: 530px;
+    padding: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;   
+}
+.input {
+    display: flex;
+    align-self: center;
+    margin: 30px 0 30px 0 ;
+    border: 3px solid #fff;
+    border-radius: 15px ;
+    padding: 10px;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    color: #8e2de2;
+    font-weight: 600;
+    font-family: 'Oxygen', sans-serif;
+}
+::placeholder {
+    color: #8e2de2;
+    opacity: 0.4;
+    font-family: 'Oxygen', sans-serif;
+}
+.main-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0px 35px 0px ;
+    
+}
+.button {
+    align-self:center;
+    width: 100px;
+    height: 50px; 
+    margin: 0 0 30px 0 ;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight:600;
+    color: #8e2de2;
+    font-size: 17px;
+}
+.button:active {
+    background-color: #320096;
+    color: #fff;
+    border-color: #fff ;
+}
+.button_del {
+    align-self:center;
+    width: 100px;
+    height: 50px; 
+    margin: 0 0 30px 0 ;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight:600;
+    color: #8e2de2;
+    font-size: 17px;
+}
+
+
+.button_del:active {
+    background-color: #320096;
+    color: #fff;
+    border-color: #fff ;
+}
+
+.button_mark {
+    align-self:center;
+    width: 100px;
+    height: 50px; 
+    margin: 0 0 30px 0 ;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight:600;
+    color: #8e2de2;
+    font-size: 17px;
+}
+.button_mark:active {
+    background-color: #320096;
+    color: #fff;
+    border-color: #fff ;
+}
+
+
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+
+}
+
+.output > div {
+    margin: 0 0 10px 0 ;
+
+}
+.output-2 {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+.output-2 > div {
+    margin: 0 0 10px 0 ;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.finished {
+    display: flex;
+}
+.span-finished {
+
+}
+.unfinished {
+    display: flex;
+}
+.span-unfinished {
+
+}
+.counter-finished {
+    margin: 0 3px 0 0 ;
+}
+.counter-unfinished {
+    margin: 0 3px 0 0;
+   
+}
