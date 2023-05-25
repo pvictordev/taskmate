@@ -153,65 +153,66 @@ document.addEventListener('keydown', (event) => {
 
 
 //for button click 
-button.addEventListener('click', () => {
-  
+button.addEventListener('click', (event) => {
+    
     const inputVal = input.value; 
 
     //creating tasks
-    if(inputVal) {
-        let task = input.value;
+        if(inputVal) {
+            let task = input.value;
 
 
-        var newTask = document.createElement("div");
-            var taskInput = document.createElement("input");
-            newTask.classList.add('newTask');
+            var newTask = document.createElement("div");
+                var taskInput = document.createElement("input");
+                newTask.classList.add('newTask');
 
-            taskInput.setAttribute("type", "checkbox");
-            taskInput.setAttribute("name", "chk"); 
+                taskInput.setAttribute("type", "checkbox");
+                taskInput.setAttribute("name", "chk"); 
 
-            var taskLabel = document.createElement("label"); 
-            var taskLabelText = document.createTextNode(' '+ task);
-            taskLabel.appendChild(taskLabelText)
-            
-        newTask.appendChild(taskInput);
-        newTask.appendChild(taskLabel);
+                var taskLabel = document.createElement("label"); 
+                var taskLabelText = document.createTextNode(' '+ task);
+                taskLabel.appendChild(taskLabelText)
+                
+            newTask.appendChild(taskInput);
+            newTask.appendChild(taskLabel);
 
 
-        output.appendChild(newTask);
+            output.appendChild(newTask);
+        }
 
-       
-        //mark particular tasks
 
-        //counter for unfinished tasks 
+    //counter for unfinished tasks 
         const count = taskInput.checked
         if(count == false) {
             unfinished.innerHTML = Number(unfinished.innerHTML) + 1
             
         }
 
-       
+    //mark particular task
         taskInput.onclick = function(event) {
             
             const isCheck = taskInput.checked;
-
             if(isCheck == true) {
-                taskLabel.style.textDecoration ="line-through";  
-                
+                output2.appendChild(newTask)
+                taskLabel.style.textDecoration ="line-through";
+
                 //counter for finished tasks
                 finished.innerHTML = Number(finished.innerHTML) + 1
                 unfinished.innerHTML = Number(unfinished.innerHTML) - 1
             }
             else if(isCheck != true){
+                output.appendChild(newTask)
                 //counter for unfinished tasks part 2
                 taskLabel.style.textDecoration ="none" 
                 unfinished.innerHTML = Number(unfinished.innerHTML) + 1
                 finished.innerHTML = Number(finished.innerHTML) - 1
-                
             }
+
+
             
         }
 
-        //deleteing particular tasks
+    //deleteing particular tasks
         taskLabel.onclick = (event) => {
             newTask.remove();
 
@@ -227,18 +228,23 @@ button.addEventListener('click', () => {
             }
         }
 
-        //delete all tasks
+    //delete all tasks
         deleteAll.addEventListener('click', (event) => {
             newTask.remove(); 
+            
             //reset the counter
             finished.innerHTML = 0
             unfinished.innerHTML = 0
         })
     
-        //mark all tasks
+   
+    //mark all tasks
         markAll.addEventListener('click', (event) => {
-            var checkboxes = document.getElementsByName('chk'); 
+            output.removeChild(newTask)
+            output2.appendChild(newTask);
+            
 
+            var checkboxes = document.getElementsByName('chk'); 
             for(let i = 0; i<checkboxes.length; i++) {
                 if(checkboxes[i].type == 'checkbox') {
                     checkboxes[i].checked = true;
@@ -248,13 +254,17 @@ button.addEventListener('click', () => {
             }
                 //counter for all finished tasks
                 finished.innerHTML = checkboxes.length  
-                unfinished.innerHTML = checkboxes.length - checkboxes.length 
-            
+                unfinished.innerHTML = checkboxes.length - checkboxes.length
+              
         })
-        //unmark all tasks 
-        markAll.addEventListener('dblclick', (event) => {
-            var checkboxes = document.getElementsByName('chk'); 
 
+    //unmark all tasks 
+        markAll.addEventListener('dblclick', (event) => {
+            output2.removeChild(newTask)
+            output.appendChild(newTask);
+        
+
+            var checkboxes = document.getElementsByName('chk'); 
              for(let i = 0; i<checkboxes.length; i++) {
                 if(checkboxes[i].type == 'checkbox') {
                     checkboxes[i].checked = false; 
@@ -265,14 +275,14 @@ button.addEventListener('click', () => {
                 unfinished.innerHTML = checkboxes.length  
                 finished.innerHTML = checkboxes.length - checkboxes.length
             
-        })        
-   }   
+        })
+ 
+    
 
    input.value = '';
+   
 
 })
-
-
 
 
 
