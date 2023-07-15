@@ -18,7 +18,6 @@ let unfinishedInner = unfinished.innerHTML
 
 //for enter click
 
-  
 
 let taskMate = () => {
     const inputVal = input.value; 
@@ -36,14 +35,13 @@ let taskMate = () => {
                 taskInput.setAttribute("name", "chk"); 
 
                 var taskLabel = document.createElement("label"); 
-                var taskLabelText = document.createTextNode(' '+ task);
+                var taskLabelText = document.createTextNode(' ' + task);
                 taskLabel.appendChild(taskLabelText)
                 
-            newTask.appendChild(taskInput);
-            newTask.appendChild(taskLabel);
+                newTask.appendChild(taskInput);
+                newTask.appendChild(taskLabel);
 
-
-            output.appendChild(newTask);
+                output.appendChild(newTask);
         }
 
 
@@ -116,6 +114,7 @@ let taskMate = () => {
                     checkboxes[i].checked = true;
                     taskLabel.style.textDecoration = "line-through";
                 }
+                
             
             }
                 //counter for all finished tasks
@@ -147,6 +146,8 @@ let taskMate = () => {
 
    input.value = '';
 }
+
+
 button.addEventListener('click', taskMate)
 document.addEventListener("keydown", (event) => {
     if(event.code == 'Enter') {
