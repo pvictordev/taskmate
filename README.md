@@ -1,3 +1,3 @@
 # TASKMATE
 # Simple To-do app made on JavaScript
-Deploy: 
+Deploy: https://pvictordev.github.io/taskmate/
