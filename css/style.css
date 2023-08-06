@@ -104,18 +104,26 @@ body {
     border-color: #fff ;
 }
 
+.newTask {
+    display: inline-block;
+}
 
 .output {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex-wrap: wrap;
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
     padding: 10px 20px;
     border: 1px solid #fff;
+    margin-right: 5px;
     border-radius: 15px;
     max-width: 230px;
-    word-wrap: break-word;
+    word-break: break-all;
 
+}
+.output > label {
+   
 }
 
 .output > div {
@@ -128,7 +136,8 @@ body {
     border: 1px solid #fff;
     border-radius: 15px;
     max-width: 230px;   
-    word-wrap: break-word;
+    word-break: break-all;
+    margin-left: 5px;
 }
 .output-2 > div {
     margin: 0 0 10px 0 ;

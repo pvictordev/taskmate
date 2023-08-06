@@ -43,7 +43,7 @@ let taskMate = () => {
 
                 output.appendChild(newTask);
         }
-
+        
 
     //counter for unfinished tasks 
         const count = taskInput.checked
