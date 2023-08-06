@@ -117,6 +117,7 @@ body {
     padding: 10px 20px;
     border: 1px solid #fff;
     margin-right: 5px;
+    margin-bottom: 10px;
     border-radius: 15px;
     max-width: 230px;
     word-break: break-all;
@@ -138,6 +139,7 @@ body {
     max-width: 230px;   
     word-break: break-all;
     margin-left: 5px;
+    margin-bottom: 10px;
 }
 .output-2 > div {
     margin: 0 0 10px 0 ;
