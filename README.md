@@ -1,5 +1,5 @@
 # TASKMATE
-# Simple To-do app made on JavaScript
+# Simple To-do app with no database made using HTML, CSS and JavaScript
 Functionality:
 1. To add a task, type it in the input field and click the "Add" button or press ENTER.
 2. To delete all the added tasks, click the "Delete All" button.
