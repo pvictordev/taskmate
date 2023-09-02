@@ -1,5 +1,5 @@
 # TASKMATE
-## To-do app that doesn't require data storage.
+## To-do Web App that doesn't require data storage.
 Functionality:
 1. To add a task, type it in the input field and click the "Add" button or press ENTER.
 2. To delete all the added tasks, click the "Delete All" button.
