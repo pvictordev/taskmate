@@ -1,6 +1,6 @@
 # TASKMATE
-## To-do Web App made with JavaScript.
-Functionality:
+## To-do Web App made with Vanilla JavaScript.
+### Functionality:
 1. To add a task, type it in the input field and click the "Add" button or press ENTER.
 2. To delete all the added tasks, click the "Delete All" button.
 3. To delete particular tasks, click on the label of the task.
